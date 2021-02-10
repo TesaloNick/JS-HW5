@@ -43,20 +43,20 @@ document.write('Большее число из функции max: ', max(a, b),
 
 // Задание 4
 
-// document.write('<br>Задание 4. Возвращать массив b вывести его.<br>');
-// let arr4 = [];
-// function returnArray() {
-//     let arr4First = prompt('Введите первый элемент массива', '3');
-//     let arr4Last = prompt('Введите последний элемент массива', '10');
-//     for (i = +arr4First; i <= +arr4Last; i++){
-//         arr4.push(i);
-//     }
-//     return arr4;
-// }
-// function writeArray() {
-//     document.write('Получился массив: ', returnArray(), '.<br>')
-// }
-// writeArray();
+document.write('<br>Задание 4. Возвращать массив b вывести его.<br>');
+let arr4 = [];
+function returnArray() {
+    let arr4First = prompt('Введите первый элемент массива', '3');
+    let arr4Last = prompt('Введите последний элемент массива', '10');
+    for (i = +arr4First; i <= +arr4Last; i++){
+        arr4.push(i);
+    }
+    return arr4;
+}
+function writeArray() {
+    document.write('Получился массив: ', returnArray(), '.<br>')
+}
+writeArray();
 
 // Задание 5
 
@@ -65,9 +65,24 @@ function isEven(n) {
     if (isNaN(n)) {
         return document.write('Вы ввели не число.<br>')
     } else if (n % 2 === 0){
-        return document.write('Число четное: ', true, '.<br>');
+        return true;
     } else {
-        return document.write('Число нечетное: ', false, '.<br>');
+        return false;
     }
 }
-isEven(25)
+document.write('Число четное/нечетное: ' + isEven(25) + '.<br>');
+
+// Задание 6
+
+document.write('<br>Задание 6. Останутся лежать четные числа.<br>');
+console.log(arr4);
+let arr6 = [];
+for (let i = 0; i < arr4.length; i++) {
+    if (isEven(+arr4[i]) === true) {
+        arr6.push(arr4[i])
+    }
+}
+// console.log(arr6);
+document.write('Массив с четными числами: ' + arr6 + '.<br>');
+
+
