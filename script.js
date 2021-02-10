@@ -98,8 +98,34 @@ function pyramid(heigth) {
         }
         document.write('<br>');
     }
-    // console.log(arguments[arguments.length-1]);
-
 }
-// console.log(pyramid(9, '*'));
 pyramid(9, '*')
+
+// Задание 8
+
+document.write('<br>Задание 8. Равнобедренный треугольник.<br>');
+let heigthTriangle = prompt('Задание 8. Введите высоту равнобедренного треугольника')
+function triangle(heigth) {
+    document.write('<div style="display:flex; flex-direction: column; align-items: center;">')
+    for (let i=0; i <= heigth-1; i++) {
+        document.write('<div>')
+        for (let j=1; j <= (2*i+1); j++) {
+            document.write('*');
+        } 
+        document.write('</div>')
+    }
+    document.write('</div>')
+}
+function reverseTriangle(heigth) {
+    document.write('<div style="display:flex; flex-direction: column; align-items: center;">')
+    for (let i = heigth-1; i >= 0; i--) {
+        document.write('<div>')
+        for (let j = 1; j <= (2*i+1); j++) {
+            document.write('*');
+        } 
+        document.write('</div>')
+    }
+    document.write('</div>')
+}
+triangle(heigthTriangle)
+reverseTriangle(heigthTriangle)
