@@ -40,3 +40,19 @@ function min(a, b){
     }
 }
 document.write('Большее число из функции max: ', max(a, b), '. Меньшее число из функции min: ', min(a, b), '.<br>')
+
+document.write('<br>Задание 4. Возвращать массив b вывести его.<br>');
+let arr4 = [];
+
+function returnArray() {
+    let arr4First = prompt('Введите первый элемент массива', '3');
+    let arr4Last = prompt('Введите последний элемент массива', '10');
+    for (i = +arr4First; i <= +arr4Last; i++){
+        arr4.push(i);
+    }
+    return arr4;
+}
+function writeArray(){
+    document.write('Получился массив: ', returnArray())
+}
+writeArray()
