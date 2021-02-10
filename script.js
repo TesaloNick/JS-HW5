@@ -84,48 +84,64 @@ document.write('Большее число из функции max: ', max(a, b),
 // }
 // document.write('Массив с четными числами: ' + arr6 + '.<br>');
 
-// Задание 7
+// // Задание 7
 
-document.write('<br>Задание 7. Нарисовать пирамиду.<br>');
-function pyramid(heigth) {
-    for (let i=1; i <= heigth; i++) {
-        for (let j=1; j <= i; j++) {
-            if (arguments.length > 1){
-                document.write(arguments[arguments.length-1]);
-            } else {
-                document.write(i);
-            }
+// document.write('<br>Задание 7. Нарисовать пирамиду.<br>');
+// function pyramid(heigth) {
+//     for (let i=1; i <= heigth; i++) {
+//         for (let j=1; j <= i; j++) {
+//             if (arguments.length > 1){
+//                 document.write(arguments[arguments.length-1]);
+//             } else {
+//                 document.write(i);
+//             }
+//         }
+//         document.write('<br>');
+//     }
+// }
+// pyramid(9, '*')
+
+// // Задание 8
+
+// document.write('<br>Задание 8. Равнобедренный треугольник.<br>');
+// let heigthTriangle = prompt('Задание 8. Введите высоту равнобедренного треугольника')
+// function triangle(heigth) {
+//     document.write('<div style="display:flex; flex-direction: column; align-items: center;">')
+//     for (let i=0; i <= heigth-1; i++) {
+//         document.write('<div>')
+//         for (let j=1; j <= (2*i+1); j++) {
+//             document.write('*');
+//         } 
+//         document.write('</div>')
+//     }
+//     document.write('</div>')
+// }
+// function reverseTriangle(heigth) {
+//     document.write('<div style="display:flex; flex-direction: column; align-items: center;">')
+//     for (let i = heigth-1; i >= 0; i--) {
+//         document.write('<div>')
+//         for (let j = 1; j <= (2*i+1); j++) {
+//             document.write('*');
+//         } 
+//         document.write('</div>')
+//     }
+//     document.write('</div>')
+// }
+// triangle(heigthTriangle)
+// reverseTriangle(heigthTriangle)
+
+// Задание 9
+
+document.write('<br>Задание 9. Массив заполненный числами Фибоначи от 0 до 1000.<br>');
+function numbersFib(n) {
+    let arrayFib = [0, 1];
+    for (let i=0; i <= n; i++) {
+        if ((i) === arrayFib[arrayFib.length-1] + arrayFib[arrayFib.length-2]) {
+            arrayFib.push(i)
         }
-        document.write('<br>');
     }
-}
-pyramid(9, '*')
+    console.log(arrayFib);
+    return arrayFib;
 
-// Задание 8
-
-document.write('<br>Задание 8. Равнобедренный треугольник.<br>');
-let heigthTriangle = prompt('Задание 8. Введите высоту равнобедренного треугольника')
-function triangle(heigth) {
-    document.write('<div style="display:flex; flex-direction: column; align-items: center;">')
-    for (let i=0; i <= heigth-1; i++) {
-        document.write('<div>')
-        for (let j=1; j <= (2*i+1); j++) {
-            document.write('*');
-        } 
-        document.write('</div>')
-    }
-    document.write('</div>')
 }
-function reverseTriangle(heigth) {
-    document.write('<div style="display:flex; flex-direction: column; align-items: center;">')
-    for (let i = heigth-1; i >= 0; i--) {
-        document.write('<div>')
-        for (let j = 1; j <= (2*i+1); j++) {
-            document.write('*');
-        } 
-        document.write('</div>')
-    }
-    document.write('</div>')
-}
-triangle(heigthTriangle)
-reverseTriangle(heigthTriangle)
+document.write('Массив с последовательностью Фибоначи: ', numbersFib(1000),'.<br>');
