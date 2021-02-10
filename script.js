@@ -136,12 +136,28 @@ document.write('<br>Задание 9. Массив заполненный чис
 function numbersFib(n) {
     let arrayFib = [0, 1];
     for (let i=0; i <= n; i++) {
-        if ((i) === arrayFib[arrayFib.length-1] + arrayFib[arrayFib.length-2]) {
+        if (i === arrayFib[arrayFib.length-1] + arrayFib[arrayFib.length-2]) {
             arrayFib.push(i)
         }
     }
-    console.log(arrayFib);
     return arrayFib;
-
 }
 document.write('Массив с последовательностью Фибоначи: ', numbersFib(1000),'.<br>');
+
+// Задание 10
+let number10 = 9992;
+document.write('<br>Задание 10. Сумма чисел числа ', number10, ' стала однозначным числом.<br>');
+function sumDigits(n) {
+    let sum = 0;
+    for (let i=0; i < n.length; i++) {
+        sum += +n[i];
+    }
+    if (sum > 9) {
+        sumDigits(sum + '');
+    } else{
+        // console.log(sum);
+        document.write('Сумма чисел числа равна: ' + sum + '.<br>');        ;
+    }
+}
+sumDigits(number10 + '')
+
