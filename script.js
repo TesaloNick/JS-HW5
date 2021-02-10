@@ -145,6 +145,7 @@ function numbersFib(n) {
 document.write('Массив с последовательностью Фибоначи: ', numbersFib(1000),'.<br>');
 
 // Задание 10
+
 let number10 = 9992;
 document.write('<br>Задание 10. Сумма чисел числа ', number10, ' стала однозначным числом.<br>');
 function sumDigits(n) {
@@ -161,3 +162,17 @@ function sumDigits(n) {
 }
 sumDigits(number10 + '')
 
+// Задание 11
+
+let arr11 = [1,2,3,4,5];
+document.write('<br>Задание 11. Выведите последовательно элементы массива ', arr11,', используя рекурсию и не используя цикл.<br>');
+function showArrayElements(array) {
+    if (array.length === 1){
+        document.write(array[0]); 
+    } else{
+        document.write(array[0], ', '); 
+        array.shift()
+        return showArrayElements(array)
+    }
+}
+showArrayElements(arr11)
