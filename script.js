@@ -176,3 +176,21 @@ function showArrayElements(array) {
     }
 }
 showArrayElements(arr11)
+
+// Задание 11
+
+console.log('Задание 12. Выведите информацию в рамке в консоль.');
+let homework = prompt('Домашняя работа', 'Домашняя работа: «Функции»');
+let group = prompt('Группа', 'Выполнил: студент гр. FE108');
+let student = prompt('Ф.И.О.', 'Антонович Николай Владимирович');
+function doMiddleFrameRows(a) {
+    console.log('*', a, '*');
+}
+doMiddleFrameRows(homework)
+doMiddleFrameRows(group)
+doMiddleFrameRows(student)
+
+function doUpDownFrameRows(a) {
+
+}
+
