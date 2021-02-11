@@ -177,7 +177,7 @@ function showArrayElements(array) {
 }
 showArrayElements(arr11)
 
-// Задание 11
+// Задание 12
 
 console.log('Задание 12. Выведите информацию в рамке в консоль.');
 let homework = prompt('Домашняя работа', 'Домашняя работа: «Функции»');
@@ -196,14 +196,13 @@ for (let i=0; i < contentArray.length; i++){
 }
 for (let i=0; i < contentArray.length; i++){
     differentArray.push(maxContent-contentArray[i].length)
+    contentArray[i] += ' '.repeat(differentArray[i])
 }
-for (let i=0; i < contentArray.length; i++){
-    for (let j=0; j < differentArray[i]; j++) {
-        contentArray[i] += ' ';
-    }
-}
-console.log(contentArray);
-
+// for (let i=0; i < contentArray.length; i++){
+//     for (let j=0; j < differentArray[i]; j++) { // альтернативный способ растягивания строки
+//         contentArray[i] += ' ';
+//     }
+// }
 function doUpDownFrameRows(a) {
     let stringLength = '';
     for (let i=1; i <= a+4; i++){
@@ -215,8 +214,8 @@ doUpDownFrameRows(maxContent)
 for (let i=0; i < contentArray.length; i++){
     doMiddleFrameRows(contentArray[i])
 }
-// doMiddleFrameRows(homework)
-// doMiddleFrameRows(group)
-// doMiddleFrameRows(student)
 doUpDownFrameRows(maxContent)
 
+// Задание 13
+
+console.log('Задание 13. Проверка на правильность ввода адреса эл. почты, неиспользуя регулярные выражения.');
