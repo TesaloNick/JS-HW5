@@ -188,12 +188,22 @@ function doMiddleFrameRows(a) {
 }
 let contentArray = [homework, group, student]
 let maxContent = 0;
+let differentArray = []
 for (let i=0; i < contentArray.length; i++){
     if (contentArray[i].length >= maxContent) {
         maxContent = contentArray[i].length;
     }
 }
-console.log(maxContent);
+for (let i=0; i < contentArray.length; i++){
+    differentArray.push(maxContent-contentArray[i].length)
+}
+for (let i=0; i < contentArray.length; i++){
+    for (let j=0; j < differentArray[i]; j++) {
+        contentArray[i] += ' ';
+    }
+}
+console.log(contentArray);
+
 function doUpDownFrameRows(a) {
     let stringLength = '';
     for (let i=1; i <= a+4; i++){
@@ -202,8 +212,11 @@ function doUpDownFrameRows(a) {
     return console.log(stringLength);
 }
 doUpDownFrameRows(maxContent)
-doMiddleFrameRows(homework)
-doMiddleFrameRows(group)
-doMiddleFrameRows(student)
+for (let i=0; i < contentArray.length; i++){
+    doMiddleFrameRows(contentArray[i])
+}
+// doMiddleFrameRows(homework)
+// doMiddleFrameRows(group)
+// doMiddleFrameRows(student)
 doUpDownFrameRows(maxContent)
 
