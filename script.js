@@ -189,12 +189,12 @@ function doMiddleFrameRows(a) {
 let contentArray = [homework, group, student]
 let maxContent = 0;
 let differentArray = []
-for (let i=0; i < contentArray.length; i++){
+for (let i=0; i < contentArray.length; i++){    // нахождение максимальной длины строки
     if (contentArray[i].length >= maxContent) {
         maxContent = contentArray[i].length;
     }
 }
-for (let i=0; i < contentArray.length; i++){
+for (let i=0; i < contentArray.length; i++){     // увеличение длины строки до размера самой длинной
     differentArray.push(maxContent-contentArray[i].length)
     contentArray[i] += ' '.repeat(differentArray[i])
 }
@@ -203,14 +203,14 @@ for (let i=0; i < contentArray.length; i++){
 //         contentArray[i] += ' ';
 //     }
 // }
-function doUpDownFrameRows(a) {
+function doUpDownFrameRows(a) {     // верхняя и нижние строки из звездочек
     let stringLength = '';
     for (let i=1; i <= a+4; i++){
         stringLength += '*';
     }
     return console.log(stringLength);
 }
-doUpDownFrameRows(maxContent)
+doUpDownFrameRows(maxContent) 
 for (let i=0; i < contentArray.length; i++){
     doMiddleFrameRows(contentArray[i])
 }
