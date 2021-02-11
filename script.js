@@ -186,11 +186,24 @@ let student = prompt('Ф.И.О.', 'Антонович Николай Влади�
 function doMiddleFrameRows(a) {
     console.log('*', a, '*');
 }
+let contentArray = [homework, group, student]
+let maxContent = 0;
+for (let i=0; i < contentArray.length; i++){
+    if (contentArray[i].length >= maxContent) {
+        maxContent = contentArray[i].length;
+    }
+}
+console.log(maxContent);
+function doUpDownFrameRows(a) {
+    let stringLength = '';
+    for (let i=1; i <= a+4; i++){
+        stringLength += '*';
+    }
+    return console.log(stringLength);
+}
+doUpDownFrameRows(maxContent)
 doMiddleFrameRows(homework)
 doMiddleFrameRows(group)
 doMiddleFrameRows(student)
-
-function doUpDownFrameRows(a) {
-
-}
+doUpDownFrameRows(maxContent)
 
