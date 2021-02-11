@@ -221,7 +221,7 @@
 document.write('<br><br>Задание 13. Проверка на правильность ввода адреса эл. почты, неиспользуя регулярные выражения.<br>');
 let email = prompt('Введите адрес электронной почты: ', 'Tesa_lo-Nick@gmail.com');
 let arraySymbol =['_', '-', '.', '@']
-function checkEmail(a) {
+function checkEmail_a(a) {
     for (let i=0; i < a.length; i++) { // ввод только лат.букв и '_', '-', '.', '@'
         if (!((a[i] === '_') || (a[i] === '-') || (a[i] === '.') || (a[i] === '@') || ((a[i].charCodeAt() >= 65) && (a[i].charCodeAt() <= 122)))) {
             alert('Вы ввели неправильный символ');
@@ -248,4 +248,4 @@ function checkEmail(a) {
         }
     }
 }
-checkEmail(email)
+checkEmail_a(email)
