@@ -219,11 +219,13 @@
 // Задание 13
 
 document.write('<br><br>Задание 13. Проверка на правильность ввода адреса эл. почты, неиспользуя регулярные выражения.<br>');
-let email = prompt('Введите адрес электронной почты: ', 'Tesa_lo-Nick@gmail.com');
+let email = prompt('Введите адрес электронной почты: ', 'Tesa.lo1Nick@g_m-ail.com');
 let arraySymbol =['_', '-', '.', '@']
-function checkEmail_a(a) {
-    for (let i=0; i < a.length; i++) { // ввод только лат.букв и '_', '-', '.', '@'
-        if (!((a[i] === '_') || (a[i] === '-') || (a[i] === '.') || (a[i] === '@') || ((a[i].charCodeAt() >= 65) && (a[i].charCodeAt() <= 122)))) {
+function checkEmail(a) {
+    for (let i=0; i < a.length; i++) { // ввод только лат.букв, цифр и спецсимволов '_', '-', '.', '@'
+        if (((a[i] === '_') || (a[i] === '-') || (a[i] === '.') || (a[i] === '@') || ((a[i].charCodeAt() >= 65) && (a[i].charCodeAt() <= 90)) || ((a[i].charCodeAt() >= 97) && (a[i].charCodeAt() <= 122)) || ((a[i].charCodeAt() >= 48) && (a[i].charCodeAt() <= 57)))) {
+            continue
+        } else {
             alert('Вы ввели неправильный символ');
             break;
         }
@@ -240,6 +242,7 @@ function checkEmail_a(a) {
         for (let n=0; n < arraySymbol.length; n++) {
             for (let i=0; i < a.length; i++) {
                 if (!((a[i] === arraySymbol[j]) && (a[i+1] === arraySymbol[n]))) {  
+                    continue
                 } else {
                     alert('Вы ввели небуквенные символы один за одним');
                     break;
@@ -247,5 +250,53 @@ function checkEmail_a(a) {
             }
         }
     }
+    for (let i=0; i < a.length; i++) { // имя почты больше 2 символов
+        if (a[i] === '@') {
+            // console.log(a[i], i);
+            if (a[i-2]){
+                continue;
+            } else {
+                alert('Имя почты должно быть больше двух символов')
+                break;
+            }
+        } else {
+            continue;
+        }
+    }
+    for (let i=0; i < a.length; i++) {  // Имя почты должно состоять из букв, цифр и точки
+        if (a[i] === '@') {
+            for (let j=0; j <= i-1; j++) {
+                // console.log(j);
+                if ((a[j].charCodeAt() >= 48 && a[j].charCodeAt() <= 57) || ((a[j].charCodeAt() >= 65) && (a[j].charCodeAt() <= 90)) || ((a[j].charCodeAt() >= 97) && (a[j].charCodeAt() <= 122)) || a[j].charCodeAt() === 46){
+                    continue
+                } else {
+                    alert('Имя почты должно состоять из букв, цифр и точки')
+                    break;
+                }
+            }
+        }
+    }
+    for (let i=0; i < a.length; i++) {  // Имя почты не должно начинаться с цифры
+        if (a[0].charCodeAt() >= 48 && a[0].charCodeAt() <= 57) {
+            alert('Имя почты не должно начинаться с цифры')
+            break;
+        } else {
+            continue;
+        }
+    }
+    for (let i=0; i < a.length; i++) {  // 
+        if (a[i] === '@') {
+            for (let j=0; j <= i-1; j++) {
+                console.log(j);
+                if (!(a[j].charCodeAt() >= 48 && a[j].charCodeAt() <= 57)) {
+                    continue
+                } else {
+                    // console.log(a[j]);
+                    // alert('Имя почты не должно состоять только из цифр')
+                    // break;
+                }
+            }
+        }
+    }
 }
-checkEmail_a(email)
+checkEmail(email)
