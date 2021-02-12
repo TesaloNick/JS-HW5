@@ -218,7 +218,7 @@ doUpDownFrameRows(maxContent)
 
 // Задание 13
 
-document.write('<br><br>Задание 13. Проверка на правильность ввода адреса эл. почты, не используя регулярные выражения.<br>');
+document.write('<br><br>Задание 13. Проверка на правильность ввода адреса эл.почты, не используя регулярные выражения.<br>');
 let email = prompt('Введите адрес электронной почты: ', 'Tesa.lo1Nick@g_m-ail.com');
 let arraySymbol =['_', '-', '.', '@']
 function checkEmail(a) {
@@ -283,6 +283,7 @@ function checkEmail(a) {
             continue;
         }
     }
+    
 
 }
 checkEmail(email)
