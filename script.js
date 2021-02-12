@@ -180,9 +180,9 @@ showArrayElements(arr11)
 // Задание 12
 
 console.log('Задание 12. Выведите информацию в рамке в консоль.');
-let homework = prompt('Домашняя работа', 'Домашняя работа: «Функции»');
-let group = prompt('Группа', 'Выполнил: студент гр. FE108');
-let student = prompt('Ф.И.О.', 'Антонович Николай Владимирович');
+let homework = prompt('Задание 12. Домашняя работа', 'Домашняя работа: «Функции»');
+let group = prompt('Задание 12. Группа', 'Выполнил: студент гр. FE108');
+let student = prompt('Задание 12. Ф.И.О.', 'Антонович Николай Владимирович');
 function doMiddleFrameRows(a) {
     console.log('*', a, '*');
 }
@@ -219,7 +219,7 @@ doUpDownFrameRows(maxContent)
 // Задание 13
 
 document.write('<br><br>Задание 13. Проверка на правильность ввода адреса эл.почты, не используя регулярные выражения.<br>');
-let email = prompt('Введите адрес электронной почты: ', 'Tesa.lo1Nick@g_m-ail.com');
+let email = prompt('Задание 13. Введите адрес электронной почты: ', 'Tesa.lo1Nick@g_m-ail.com');
 let arraySymbol =['_', '-', '.', '@']
 function checkEmail(a) {
     for (let i=0; i < a.length; i++) { // ввод только лат.букв, цифр и спецсимволов '_', '-', '.', '@'
@@ -283,8 +283,6 @@ function checkEmail(a) {
             continue;
         }
     }
-    
-
 }
 checkEmail(email)
 if (email === 'Tesa.lo1Nick@g_m-ail.com'){
