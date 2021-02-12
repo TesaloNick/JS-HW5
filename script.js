@@ -288,3 +288,4 @@ checkEmail(email)
 if (email === 'Tesa.lo1Nick@g_m-ail.com'){
     document.write('Вы правильно ввели адрес электронной почты.<br>')
 }
+ 
